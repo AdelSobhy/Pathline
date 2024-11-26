@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007acc;
+}
+
+/* Landing Section */
+.landing {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #f4faff;
+}
+
+.landing h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.landing p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #007acc;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #005f8f;
+}
+
+/* Internships Section */
+.internships {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.internships h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.internship-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #f4faff;
+    padding: 30px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #007acc;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* About Section */
+.about {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.timeline {
+    margin-top: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 0;
+    background-color: #f4faff;
+    text-align: center;
+}
+
+.carousel p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Apply Section */
+.apply {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.apply form {
+    margin-bottom: 20px;
+}
+
+.apply input, .apply select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.apply button {
+    padding: 15px 30px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply button:hover {
+    background-color: #005f8f;
+}
+
+#confirmationMessage {
+    color: green;
+}
+
+/* Footer Section */
+footer {
+    padding: 30px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+footer .social-media {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+footer .social-media a:hover {
+    color: #007acc;
+}
