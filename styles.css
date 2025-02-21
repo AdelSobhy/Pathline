@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,213 +6,313 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #000;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background-color: #f8f8f8; /* Light background for a clean look */
+    color: #333; /* Dark gray text for readability */
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* Header Section */
 header {
-    background-color: #fff;
-    padding: 20px 0;
+    display: flex;
+    justify-content: center; /* Center navigation */
+    align-items: center;
+    padding: 30px 0; /* Increased padding for more space above and below */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 header .logo {
-    font-size: 2rem;
+    position: absolute;
+    left: 20px; /* Keep it on the left */
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #000;
+    color: #d32f2f;
+    text-transform: uppercase;
+    top: 50%; /* Positioning trick */
+    transform: translateY(-50%); /* Centers it vertically */
+}
+
+.logo img {
+    height: 40px; /* Keep it proportionate */
+    vertical-align: middle;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center; /* Center nav items */
+    flex-grow: 1; /* Allows it to take full width */
 }
 
 nav ul {
     display: flex;
-    justify-content: flex-end;
     list-style-type: none;
+    justify-content: center;
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin: 0 15px; /* Space between items */
 }
 
+/* Ensure nav links look balanced */
 nav ul li a {
-    color: #000;
-    text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007acc;
+    color: #d32f2f;
+    transform: scale(1.1);
 }
 
 /* Landing Section */
 .landing {
+    position: relative;
+    background-image: url('pexels-fauxels-3183150.jpg');
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    padding: 100px 0;
-    background-color: #f4faff;
+    padding: 100px 20px;
+}
+
+.landing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(4, 4, 4, 0.6); /* Soft overlay for readability */
+    z-index: 1;
+}
+
+.landing .container {
+    position: relative;
+    z-index: 2;
 }
 
 .landing h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #ff0000; /* Elegant red */
+    margin-bottom: 15px;
 }
 
 .landing p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    color: #ffffff; /* Dark gray */
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 .cta-button {
-    background-color: #007acc;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
+    background-color: #d32f2f; /* Red accent */
+    color: #ffffff; /* White text */
+    padding: 14px 30px;
     font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
 }
 
 .cta-button:hover {
-    background-color: #005f8f;
+    background-color: #b71c1c; /* Darker red */
+    box-shadow: 0 6px 12px rgba(211, 47, 47, 0.5);
 }
 
 /* Internships Section */
+.internships .card .btn {
+    display: inline-block;
+    background-color: #d32f2f; /* Red accent */
+    color: #ffffff; /* White text */
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.internships .card .btn:hover {
+    background-color: #b71c1c; /* Darker red */
+    box-shadow: 0 6px 12px rgba(211, 47, 47, 0.5);
+}
+
 .internships {
-    padding: 50px 0;
+    padding: 60px 0;
+    background-color: #ffffff; /* White for a professional look */
     text-align: center;
 }
 
 .internships h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 25px;
 }
 
 .internship-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.card {
-    background-color: #f4faff;
-    padding: 30px;
+.internships .card {
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    padding: 25px;
     width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card .icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.card a {
-    color: #007acc;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* About Section */
-.about {
-    padding: 50px 0;
-    background-color: #fff;
+    min-width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.2);
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300; /* Set a fixed height */
 }
 
-.timeline {
-    margin-top: 30px;
+
+.internships .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(211, 47, 47, 0.3);
 }
 
-.timeline-item {
-    margin-bottom: 20px;
+/* Testimonials */
+.testimonials h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d32f2f; /* Red accent */
+    text-align: center; /* Center the text */
+    margin-bottom: 25px;
 }
 
-/* Testimonials Section */
-.testimonials {
-    padding: 50px 0;
-    background-color: #f4faff;
-    text-align: center;
+.testimonial-container {
+    width: 100%;
+    max-width: 600px; /* Adjust width */
+    margin: 0 auto; /* Center the container */
+    min-height: 350px; /* Increase height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Ensures absolute elements inside are positioned correctly */
 }
 
-.carousel p {
+.testimonial {
+    width: 100%;
+    max-width: 500px; /* Adjust width */
+    margin: 0 auto; /* Center it */
+    padding: 30px;
+    min-height: 250px; /* Ensure a good height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff; /* Make sure the background is visible */
+    color: #333; /* Improve text visibility */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    opacity: 0;
+    position: absolute; /* Prevent stacking issues */
+    transition: opacity 1s ease-in-out;
+}
+
+.testimonial.active {
+    opacity: 1;
+    position: relative;
+}
+
+.testimonial:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(211, 47, 47, 0.5);
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #d32f2f;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.testimonial h4 {
     font-size: 1.2rem;
-    margin-bottom: 15px;
+    color: #d32f2f;
 }
 
-/* Apply Section */
-.apply {
-    padding: 50px 0;
-    background-color: #fff;
-    text-align: center;
-}
 
-.apply form {
-    margin-bottom: 20px;
-}
-
-.apply input, .apply select {
-    padding: 10px;
-    margin: 10px 0;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.apply button {
-    padding: 15px 30px;
-    background-color: #007acc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.apply button:hover {
-    background-color: #005f8f;
-}
-
-#confirmationMessage {
-    color: green;
-}
-
-/* Footer Section */
+/* Footer */
 footer {
-    padding: 30px 0;
-    background-color: #000;
-    color: #fff;
+    padding: 35px 0;
+    background-color: #ffffff;
     text-align: center;
-}
-
-footer .social-media {
-    margin-bottom: 10px;
+    color: #333;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer .social-media a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2rem;
+    transition: color 0.3s, transform 0.3s;
 }
 
 footer .social-media a:hover {
-    color: #007acc;
+    color: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* Q&A Section */
+.qa {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.qa h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d32f2f;
+    margin-bottom: 25px;
+}
+
+.qa-item {
+    background: linear-gradient(to right, #ffffff, #f5f5f5);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px; /* Adds space between items */
+}
+
+
+.qa-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(211, 47, 47, 0.5);
 }
